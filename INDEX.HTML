@@ -3,230 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Escribe aquí los nombres de los integrantes de tu equipo">
+    <meta name="author" content="Emanuel García de Santiago, Fernanda Geraldine Gudiño Sánchez, Dulce Guadalupe Guerrero Fabián, Emili Vargas García">
     <meta name="Keywords" content="Salud Mental, COBAQ 06, Proyecto Transversal, Estrés, Autoestima, Ansiedad, Insomnio, Revista Digital">
     <meta name="description" content="Página del proyecto transversal sobre Salud Mental de la Revista Digital del COBAQ 06, Vol. 32, Grupo 602.">
     <title>Proyecto Transversal - Revista Salud Mental COBAQ 06</title>
-
-    <style>
-        /* --- Formato General con CSS --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f7f9fc;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* INDICACIÓN: Imagen de fondo en HEADER */
-        header {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-        }
-
-        .frase-celebre {
-            font-style: italic;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 8px;
-            max-width: 80%;
-        }
-
-        /* INDICACIÓN: Imagen de fondo en NAV + 5 enlaces */
-        nav {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 16px;
-            background-color: rgba(230, 126, 34, 0.85); 
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #d35400;
-            transform: translateY(-2px);
-        }
-
-        .contenedor-principal {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 30px auto;
-            gap: 25px;
-            padding: 0 20px;
-        }
-
-        /* INDICACIÓN: Imagen de fondo en SECTION */
-        section {
-            flex: 2;
-            min-width: 320px;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        section h2 {
-            color: #2c3e50;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #e67e22;
-            padding-bottom: 5px;
-        }
-
-        .tarjeta-articulo {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #3498db;
-        }
-
-        .tarjeta-articulo h3 {
-            color: #2980b9;
-            margin-bottom: 10px;
-        }
-
-        /* INDICACIÓN: Imagen de fondo en ASIDE */
-        aside {
-            flex: 1;
-            min-width: 280px;
-            background-image: linear-gradient(rgba(43, 58, 66, 0.88), rgba(43, 58, 66, 0.88)), url('https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=400&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            height: fit-content;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        aside h3 {
-            color: #f1c40f;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 5px;
-        }
-
-        aside p {
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .bloque-revista {
-            width: 100%;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .bloque-revista h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        /* INDICACIÓN: Asignar anchura (100%/max-width) y altura (650px) correctamente */
-        .contenedor-pdf {
-            width: 100%;
-            max-width: 900px;
-            height: 650px; 
-            margin: 0 auto 25px auto;
-            border: 2px solid #bdc3c7;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        .contenedor-pdf iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* INDICACIÓN: Botón para descargar la revista en formato PDF */
-        .boton-descarga {
-            display: inline-block;
-            background-color: #27ae60;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .boton-descarga:hover {
-            background-color: #219a52;
-            transform: scale(1.03);
-        }
-
-        /* INDICACIÓN: Imagen de fondo en FOOTER */
-        footer {
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .contenedor-principal { flex-direction: column; }
-            nav { flex-direction: column; align-items: center; }
-            .contenedor-pdf { height: 450px; }
-        }
-    </style>
+    <link rel="stylesheet" href="estilos de emil.CSS">
 </head>
 <body>
 
     <header>
         <h1>Salud Mental</h1>
-        <p>COBAQ 06 • Vol. 32 • Grupo 602 • Proyecto Transversal</p>
+        <p>COBAQ 06 Plantel Amado Nervo • Vol. 32 • Grupo 602 • Proyecto Transversal</p>
         <div class="frase-celebre">
-            "No tienes qué controlar tus pensamientos; solo tienes que dejar de permitir que ellos te controlen a ti." <br><strong>- Dan Millman</strong>
+            "No tienes que controlar tus pensamientos; solo tienes que dejar de permitir que ellos te controlen a ti." <br><strong>- Dan Millman</strong>
         </div>
     </header>
 
@@ -245,41 +34,41 @@
             
             <div class="tarjeta-articulo" id="estres">
                 <h3>¿Por qué todo me estresa tanto?</h3>
-                <p>Exámenes, comentarios en TikTok o decidir qué vas a estudiar... Tu cerebro está en plena remodelación (la zona que controla las emociones está creciendo). Para tu mente, un visto o un examen reprobado se siente como una amenaza de vida o muerte. El hack: haz una pausa y pregúntate si esto importará dentro de un año.</p>
+                <p>Exámenes, el comentario de alguien en TikTok, peleas en casa, decidir qué vas a estudiar... A veces sientes que un pequeño problema es el fin del mundo. Si alguien te ha dicho "no es para tanto, eres un exagerado", diles que la ciencia no está de acuerdo con ellos. Tu cerebro está en plena remodelación (la zona que controla las emociones está creciendo). El hack para calmarte: haz una pausa y pregúntate: ¿Esto va a importar dentro de un año?</p>
             </div>
 
             <div class="tarjeta-articulo" id="autoestima">
                 <h3>Autoestima y Amor Propio</h3>
-                <p>Tu peor enemigo vive en tu cabeza. Hay que aprender a silenciar a esa "vocecita interna" que siempre te critica y te dice que todo lo haces mal (el síndrome del impostor). Tienes valor por existir, no por lo que produces.</p>
+                <p>Tu peor enemigo vive en tu cabeza: Cómo silenciar a esa "vocecita interna" que siempre te critica y te dice que todo lo haces mal (el síndrome del impostor). Aprende a decir "No" sin sentirte culpable. Celebra tus pequeñas victorias: levantarte de la cama o lavar los platos en un día difícil ya es un gran logro. Tienes valor por el simple hecho de existir, no por lo que produces.</p>
             </div>
 
             <div class="tarjeta-articulo" id="algoritmo">
                 <h3>El Algoritmo te quiere Ansioso</h3>
-                <p>Las aplicaciones te atrapan buscando dopamina a las 3:00 a.m. Hackea tu celular activando el "Modo Zombie" (escala de grises en la accesibilidad de tu pantalla) para quitarle el atractivo visual y romper el ciclo.</p>
+                <p>Las apps no son gratis; el precio eres tú. Instagram, TikTok y YouTube usan la recompensa variable intermitente (lo mismo que las máquinas tragamonedas). No sabes qué video sigue ni cuándo llegará el próximo like; esa incertidumbre te mantiene deslizando la pantalla a las 3:00 a.m. en busca de dopamina. El truco: activa el Modo Zombie (Escala de Grises) en tu celular para que pierda su atractivo visual.</p>
             </div>
 
             <div class="tarjeta-articulo" id="orden">
                 <h3>La Física del Orden</h3>
-                <p>Cada objeto fuera de su lugar en tu cuarto genera "entropía visual". Esto satura tu memoria de trabajo y eleva el cortisol (la hormona del estrés). ¡Limpiar tu espacio limpia directamente tu mente!</p>
+                <p>En física, la entropía mide el desorden de un sistema. En tu cerebro pasa algo similar: cada objeto fuera de su lugar es un estímulo visual que tu cerebro tiene que procesar e ignorar de forma inconsciente. Esa "basura visual" satura tu memoria de trabajo, eleva los niveles de cortisol (la hormona del estrés) y sabotea tu capacidad de enfoque.</p>
             </div>
         </section>
 
         <aside>
-            <h3>Insomnio Cero</h3>
-            <p>No dormir apaga tu corteza prefrontal (la lógica) e hiperactiva tu amígdala (emocional) en un 60%. Durante el sueño profundo, el sistema glinfático lava tu cerebro eliminando toxinas. ¡Duerme bien!</p>
+            <h3>Guía para el Insomnio Cero</h3>
+            <p>No dormir apaga tu corteza prefrontal (la zona lógica) e hiperactiva tu amígdala (emociones) en un 60%. Tras una mala noche, estás irritable y todo te molesta. Durante el sueño profundo se activa el sistema glinfático, que literalmente "lava" tu cerebro eliminando toxinas. ¡Sin sueño, tu motor arranca sucio!</p>
             
             <h3>Zona Interactiva</h3>
-            <p>Nuestra revista cuenta con un test exclusivo para medir tus niveles de atención. ¡Rellénalo directamente interactuando con el PDF aquí abajo!</p>
+            <p>Nuestra revista cuenta con un test exclusivo de opción múltiple para medir tu nivel de atención diaria y tensión física. ¡Desconéctate del celular y contéstalo interactuando directamente en el PDF de abajo!</p>
         </aside>
 
         <div class="bloque-revista" id="revista-digital">
             <h2>Visualizador Oficial de la Revista</h2>
             
             <div class="contenedor-pdf">
-                <iframe src="Salud Mental (1).pdf"></iframe>
+                <iframe src="Salud%20Mental.pdf"></iframe>
             </div>
 
-            <p>¿Quieres llevarla contigo? Descarga el archivo PDF original de nuestra autoría:</p>
+            <p>¿Quieres llevar nuestra revista contigo? Descárgala en su formato original:</p>
             <br>
             <a href="Salud%20Mental.pdf" download="Salud_Mental_Revista_COBAQ06.pdf" class="boton-descarga">
                 📥 Descargar Mi Revista (PDF)
@@ -290,7 +79,7 @@
 
     <footer>
         <p>&copy; 2026 COBAQ 06 Plantel Amado Nervo. Todos los derechos reservados.</p>
-        <p>Proyecto Transversal de Informática y Salud Mental — Integrantes del Grupo 602.</p>
+        <p>Proyecto Transversal de Informática y Salud Mental — Diseñado por Integrantes del Grupo 602.</p>
     </footer>
 
 </body>
